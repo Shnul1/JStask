@@ -9,14 +9,14 @@ sub、substr、substring的区别：
 let string = "hello world";
 console.log(string.substring(2, 4));
 console.log(string.substring(0));
-console.log(string.substr(2, 4));0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+console.log(string.substr(2, 4));
 console.log(string.substr(0));
 console.log(string.sub());
 ```
 
 sub()方法用于把字符串显示为下标，sub会给字符串外层加入<sub>标签，substr() 方法可在字符串中抽取从 *start* 下标开始的指定数目的字符，substring() 方法用于提取字符串中介于两个指定下标之间的字符。substr截取字符串时包含末尾下标，而substring不包含。当都是传入一个参数时输出结果相同。
 
-测试结果：![字符串测试结果](\image\测试结果.png)
+测试结果：![字符串测试结果](image/测试结果.png)
 
 不错的正则表达式学习网站：https://codejiaonang.com/#/course/regex_chapter1/0/0
 
