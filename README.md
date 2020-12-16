@@ -63,4 +63,3 @@ map()与filter()方法的区别在于，map只是对数组中的值进行判断�
 在`JavaScript`里使用`typeof`判断数据类型，只能区分 **基本类型** ，即：`number`、`string`、`undefined`、`boolean`、`object`。
 对于`null`、`array`、`function`、`object`来说，使用`typeof`都会统一返回`object`字符串。
 要想区分对象、数组、函数、单纯使用`typeof`是不行的。在JS中，可以通过`Object.prototype.toString`方法，判断某个对象之属于哪种内置类型。
-
