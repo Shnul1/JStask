@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body, html, .contain{
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+}
+
+input[type='radio']{
+    display: none;
+}
+
+input{
+    border: none;
+}
+
+.nav-top{
+    width: 100%;
+    height: 66px;
+}
+
+.nav-top-row{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-top-back-container{
+    width: 64px;
+    height: 32px;
+}
+
+.nav-top-back{
+    margin-left: 32px;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-image: url(../image/返回.png);
+}
+
+.nav-top-text{
+    height: 100%;
+    line-height: 64px;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.nav-top-save{
+    color: #348bdd;
+    height: 100%;
+    line-height: 64px;
+    font-family: "幼圆";
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-right: 32px;
+    text-shadow: 0.5px 0.5px 0.5px #348bdd;
+}
+
+.red-font{
+    line-height: 1;
+    color: red;
+    font-size: 1.5rem;
+}
+
+.grey-font{
+    line-height: 1;
+    color: grey;
+    font-size: 1.5rem;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.student-name-contain,
+.student-phone-contain{
+    display: flex;
+    flex-direction: column;
+}
+
+.student-name-tip,
+.student-phone-tip{
+    width: 90px;
+    padding-left: 5px;
+}
+
+.student-name-input,
+.student-phone-input{
+    display: flex;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#student-name,
+#student-phone{
+    display: inline-block;
+    font-size: 1.9rem;
+    margin:0 10px;
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border-bottom: grey 1px solid;
+}
+
+#student-name:focus,
+#student-phone:focus{
+    border-bottom: rgb(89, 191, 238) 1px solid;
+}
+
+.ext-info{
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+.ext-info-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ext-info-text{
+    margin-left: 18px;
+}
+
+.ext-info-button{
+    font-size: 1.5rem;
+    color: #348bdd;
+    margin-right: 18px;
+}
+
+.ext-info-content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.sex-select{
+    display: flex;
+    width: 50%;
+    margin-left: 18px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sex-text{
+    font-size: 2rem;
+    color: grey;
+}

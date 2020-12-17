@@ -4,8 +4,76 @@
     <meta charset="UTF-8">
     <title>学员信息</title>
     <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+    <!-- <script>
+    (function (doc, win, undefined) {
+        var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in win? 'orientationchange' : 'resize',
+        recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if (clientWidth === undefined) return; 
+            docEl.style.fontSize =(clientWidth*16)/750 + 'px';
+        };
+        if (doc.addEventListener === undefined) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false)
+    })(document, window);
+    </script> -->
+
+
 </head>
 <body>
-    
+    <div class="contain">
+        <header class="nav-top">
+            <div class="nav-top-row">
+                <div class="nav-top-back-container">
+                    <div class="nav-top-back"></div>
+                </div>
+                <div class="nav-top-text">学员信息</div>
+                <div class="nav-top-save">保存</div>
+            </div>
+        </header>
+        <main class="content">
+            <div class="student-name-contain">
+                <div class="student-name-tip">
+                    <span class="red-font">*</span>
+                    <span class="grey-font">学员姓名</span>
+                </div>
+                <div class="student-name-input">
+                    <input type="text" id="student-name" oninput="nameLimit()" name="studentname" required="required">
+                </div>
+            </div>
+            <div class="student-phone-contain">
+                <div class="student-phone-tip">
+                    <span class="red-font">*</span>
+                    <span class="grey-font">联系电话</span>
+                </div>
+                <div class="student-phone-input">
+                    <input type="text" id="student-phone" name="phone" required="required">
+                </div>
+            </div>
+            
+            <div class="ext-info">
+                <div class="ext-info-nav">
+                    <div class="ext-info-text">
+                        <span class="grey-font">资料</span>
+                    </div>
+                    <div class="ext-info-button">收起</div>
+                </div>
+        
+                <div class="ext-info-content">
+                    <div class="sex-select">
+                        <div class="sex-text">性别</div>
+                        <div class="sex-radio">
+                            <input type="radio" id="male" name="sex">
+                            <label for="male">男生</label>
+                            <input type="radio" id="female" name="sex">
+                            <label for="female">女生</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
