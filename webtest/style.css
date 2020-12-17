@@ -4,6 +4,10 @@
     border: 0;
 }
 
+label{
+    display: block;
+}
+
 body, html, .contain{
     width: 100%;
     height: 100%;
@@ -93,12 +97,18 @@ input{
     padding-left: 5px;
 }
 
-.student-name-input,
-.student-phone-input{
+.student-name-input{
     display: flex;
     height: 40px;
     width: 100%;
     margin-bottom: 10px;
+    align-items: center;
+}
+
+.student-phone-input{
+    display: flex;
+    height: 40px;
+    width: 100%;
     align-items: center;
 }
 
@@ -120,12 +130,14 @@ input{
 
 .ext-info{
     display: flex;
-    margin-top: 30px;
     flex-direction: column;
 }
 
 .ext-info-nav{
     display: flex;
+    height: 70px;
+    line-height: 70px;
+    background-color: rgb(221, 221, 221);
     flex-direction: row;
     justify-content: space-between;
 }
@@ -142,19 +154,69 @@ input{
 
 .ext-info-content{
     display: flex;
+    height: 290px;
+    width: 100%;
     flex-direction: column;
-    margin-top: 20px;
 }
 
 .sex-select{
     display: flex;
-    width: 50%;
+    width: 100%;
     margin-left: 18px;
+    height: 57px;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .sex-text{
+    width: 30%;
+    height: 100%;
     font-size: 2rem;
     color: grey;
+    line-height: 57px;
+}
+
+.sex-radio{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+.male-icon{
+    background-image: url(../image/男生.png);
+}
+
+.female-icon{
+    background-image: url(../image/女生.png);
+}
+
+.male-icon,
+.female-icon{
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.date-selcet,
+.grade-select,
+.school-select,
+.like-select{
+
 }
