@@ -8,18 +8,26 @@ label{
     display: block;
 }
 
+input[type="radio"]{
+    display: none;
+}
+
 body, html, .contain{
     width: 100%;
     height: 100%;
     font-size: 62.5%;
 }
 
-input[type='radio']{
-    display: none;
+input, textarea{
+    outline:none;
 }
 
-input{
-    border: none;
+textarea{
+    resize:none
+}
+
+select{
+    outline: none;
 }
 
 .nav-top{
@@ -56,7 +64,7 @@ input{
     font-weight: bolder;
 }
 
-.nav-top-save{
+#nav-top-save{
     color: #348bdd;
     height: 100%;
     line-height: 64px;
@@ -146,7 +154,7 @@ input{
     margin-left: 18px;
 }
 
-.ext-info-button{
+#ext-info-button{
     font-size: 1.5rem;
     color: #348bdd;
     margin-right: 18px;
@@ -159,27 +167,67 @@ input{
     flex-direction: column;
 }
 
-.sex-select{
+.sex-select,
+.date-select,
+.grade-select,
+.school-select,
+.like-select{
     display: flex;
     width: 100%;
     margin-left: 18px;
+    margin-right: 18px;
     height: 57px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
-.sex-text{
+.sex-text,
+.date-text,
+.grade-text,
+.school-text,
+.like-text{
     width: 30%;
     height: 100%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: grey;
     line-height: 57px;
 }
 
 .sex-radio{
-    width: 70%;
+    width: 60%;
+    padding-right: 10%;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.male-radio,
+.female-radio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 4px;
+}
+
+label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.male-radio{
+    width: 20%;
+    height: 80%;
+}
+
+.female-radio{
+    width: 20%;
+    height: 80%;
 }
 
 .male-icon{
@@ -193,30 +241,43 @@ input{
 .male-icon,
 .female-icon{
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 16px;
+    height: 16px;
 }
 
+.male-text,
+.female-text{
+    width: 45px;
+    height: 32px;
+    font-size: 1.5rem;
+    line-height: 32px;
+    text-align: center;
+}
 
+.date-input-contain,
+.grade,
+.school-input-contain,
+.like-input-contain{
+    width: 70%;
+}
 
+.date-input{
+    font-size: 1.6rem;
+    color: rgba(70, 70, 70, 0.966);
+    height: 40px;
+    width: 30%;
+}
 
+.school-input,
+.like-input{
+    color: grey;
+    width: 80%;
+    height: 80%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.date-selcet,
-.grade-select,
-.school-select,
-.like-select{
-
+.grade-choose{
+    font-size: 1.2rem;
+    color: rgba(70, 70, 70, 0.966);
+    width: 20%;
+    height: 80%;
 }

@@ -19,8 +19,6 @@
         doc.addEventListener('DOMContentLoaded', recalc, false)
     })(document, window);
     </script> -->
-
-
 </head>
 <body>
     <div class="contain">
@@ -30,7 +28,7 @@
                     <div class="nav-top-back"></div>
                 </div>
                 <div class="nav-top-text">学员信息</div>
-                <div class="nav-top-save">保存</div>
+                <div id="nav-top-save" onclick="save()">保存</div>
             </div>
         </header>
         <main class="content">
@@ -40,7 +38,7 @@
                     <span class="grey-font">学员姓名</span>
                 </div>
                 <div class="student-name-input">
-                    <input type="text" id="student-name" oninput="nameLimit()" name="studentname" required="required">
+                    <input type="text" id="student-name" oninput="nameLimit()" onblur="replaceSpace(this)" name="studentname" required="required">
                 </div>
             </div>
             <div class="student-phone-contain">
@@ -49,7 +47,7 @@
                     <span class="grey-font">联系电话</span>
                 </div>
                 <div class="student-phone-input">
-                    <input type="text" id="student-phone" name="phone" required="required">
+                    <input type="text" id="student-phone" onblur="replaceSpace(this)" name="phone" required="required">
                 </div>
             </div>
             
@@ -58,36 +56,60 @@
                     <div class="ext-info-text">
                         <span class="grey-font">资料</span>
                     </div>
-                    <div class="ext-info-button">收起</div>
+                    <div id="ext-info-button" onclick="fold()">收起</div>
                 </div>
-        
                 <div class="ext-info-content">
                     <div class="sex-select">
                         <div class="sex-text">性别</div>
                         <div class="sex-radio">
                             <div class="male-radio">
-                                <div class="male-icon"></div>
+                                <!-- <div class="male-icon"></div>
+                                <div class="male-text">男生</div> -->
                                 <input type="radio" id="male" name="sex">
-                                <label for="male" class="male-label">男生</label>
+                                <label for="male">
+                                    <div class="male-icon"></div>
+                                    <div class="male-text">男生</div>
+                                </label>
                             </div>
                             <div class="female-radio">
-                                <div class="female-icon"></div>
+                                <!-- <div class="female-icon"></div>
+                                <div class="female-text">女生</div> -->
                                 <input type="radio" id="female" name="sex">
-                                <label for="female" class="female-label">女生</label>
+                                <label for="female">
+                                    <div class="female-icon"></div>
+                                    <div class="female-text">女生</div>
+                                </label>
                             </div>
                         </div>
                     </div>
-                    <div class="date-selcet">
-
+                    <div class="date-select">
+                        <div class="date-text">生日</div>
+                        <div class="date-input-contain">
+                            <input class="date-input" type="date" value="2000-01-01">
+                        </div>
                     </div>
-                    <div class="grade-selcet">
-
+                    <div class="grade-select">
+                        <div class="grade-text">年级</div>
+                        <div class="grade">
+                            <select class="grade-choose">
+                                <option value ="一年级">一年级</option>
+                                <option value ="二年级">二年级</option>
+                                <option value="三年级">三年级</option>
+                                <option value="四年级">四年级</option>
+                              </select>
+                        </div>
                     </div>
-                    <div class="school-selcet">
-
+                    <div class="school-select">
+                        <div class="school-text">就读学校</div>
+                        <div class="school-input-contain">
+                            <textarea class="school-input">请输入</textarea>
+                        </div>
                     </div>
-                    <div class="like-selcet">
-
+                    <div class="like-select">
+                        <div class="like-text">兴趣爱好</div>
+                        <div class="like-input-contain">
+                            <textarea class="like-input">请输入</textarea>
+                        </div>
                     </div>
                 </div>
             </div>
