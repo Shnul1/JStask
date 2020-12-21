@@ -1,33 +1,27 @@
 window.onload = function(){
-    let studentName = document.getElementById('student-name').value;
-    let studentPhone = document.getElementById('student-name').value;
-    if(location.search){
-        let para = location.search.split('?');
-        let studentInfo = [];
-        if(para){
-            if(/\&/.test(para[1])){
-                let paraUn = para[1].split("&");
-                for(let i = 0; i < paraUn.length; i++){
-                    studentInfo.push((paraUn[i].split("="))[1]);
+    let storage = window.localStorage
+    if(storage.studentName != null || storage.studentPhone != null){
+        document.getElementById('student-name').value = storage.studentName;
+        document.getElementById('student-phone').value = storage.studentPhone;
+    }else{
+        if(location.search){
+            let para = location.search.split('?');
+            let studentInfo = [];
+            if(para){
+                if(/\&/.test(para[1])){
+                    let paraUn = para[1].split("&");
+                    for(let i = 0; i < paraUn.length; i++){
+                        studentInfo.push((paraUn[i].split("="))[1]);
+                    }
+                }else{
+                    studentInfo.push(para[1].split("=")[1]);
                 }
-            }else{
-                studentInfo.push(para[1].split("=")[1]);
             }
+            document.getElementById('student-name').value = decodeURI(studentInfo[0]) || '';
+            document.getElementById('student-phone').value = studentInfo[1] || '';
         }
-        document.getElementById('student-name').value = decodeURI(studentInfo[0]) || '';
-        document.getElementById('student-phone').value = studentInfo[1] || '';
     }
-}
-
-window.onmouseup = function(){
-    let studentName = document.getElementById('student-name').value;
-    let studentPhone = document.getElementById('student-phone').value;
-    storage = window.localStorage;
-    storage.studentName = studentName;
-    storage.studentPhone = studentPhone;
-    function removeStorage(){
-        
-    } 
+    
 }
 
 function nameLimit(){
@@ -69,4 +63,14 @@ function save(){
     }else{
         alert('保存成功');
     }
+    let studentNameVal = document.getElementById('student-name').value;
+    let studentPhoneVal = document.getElementById('student-phone').value;
+    let storage = window.localStorage;
+    storage.studentName = studentNameVal;
+    storage.studentPhone = studentPhoneVal;
+    function removeStorage(){
+        setTimeout(() => {
+            storage.clear();
+        }, 60000)}
+    removeStorage();
 }
